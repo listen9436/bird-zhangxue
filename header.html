@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <script>
+        $(function () {
+            //header 导航栏
+            $(".nav-box").hover(function () {
+                $(this).find(".has-down").stop().slideDown(600, "elasticOut");
+            }, function () {
+                $(this).find(".has-down").stop().slideUp(100);
+            });
+            $(".nav-box").click(function () {
+                $(this).addClass("headxiaodian").siblings().removeClass("headxiaodian");
+            });
+        })
+    </script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="nav">
+        <div class="logo" onclick="window.location.reload();"></div>
+        <div class="nav-content">
+            <div class="nav-box headxiaodian">
+                <h1 onclick="window.location.assign('index.html')">首页</h1>
+            </div>
+            <div class="nav-box">
+                <h1 onclick="window.location.assign('xiaoniao.html')">小鸟掌学<span class="nav-icon"></span></h1>
+                <ul class="has-down">
+                    <li onclick="window.open('xiaoniao.html')">学习主页</li>
+                    <li onclick="window.open('xiaoniao.html#1')">小鸟掌学概述</li>
+                    <li onclick="window.open('xiaoniao.html#2')">对企业的价值</li>
+                    <li onclick="window.open('xiaoniao.html#3')">小鸟掌云</li>
+                    <li onclick="window.open('xiaoniao.html#4')">联系客服</li>
+                    <li onclick="window.open('xiaoniao.html#4')">App下载</li>
+                </ul>
+            </div>
+            <div class="nav-box">
+                <h1 onclick="window.location.assign('list.html')">小鸟动态</h1>
+            </div>
+            <div class="nav-box">
+                <h1>企业文化<span class="nav-icon"></span></h1>
+                <ul class="has-down">
+                    <li onclick="javascript:window.open('article.html?type=companyIdea')">公司理念</li>
+                    <li onclick="javascript:window.open('article.html?type=companyCulture')">公司文化</li>
+                    <li onclick="javascript:window.open('article.html?type=companyEnvironment')">公司氛围</li>
+                </ul>
+            </div>
+            <div class="nav-box">
+                <h1>人力资源<span class="nav-icon"></span></h1>
+                <ul class="has-down">
+                    <li onclick="javascript:window.open('article.html?type=talents')">人才理念</li>
+                    <li onclick="javascript:window.open('article.html?type=team')">团队介绍</li>
+                    <li onclick="javascript:window.open('article.html?type=joinUs')">招聘信息</li>
+                </ul>
+            </div>
+            <div class="nav-box">
+                <h1 onclick="javascript:window.open('article.html?type=telUs')">联系我们</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

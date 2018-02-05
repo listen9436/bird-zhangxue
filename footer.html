@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <script>
+        $(function () {
+            //音乐播放
+            $(".music").find("span").click(function () {
+                var index = $(this).index();
+
+                /*autostart:是否自动播放； loop：是否循环播放*/
+
+                if(navigator.userAgent.indexOf("Chrome")>0){
+                    /*谷歌浏览器*/
+                    $("body").append('<embed class="remove" src="music/sound0'+index+'.mp3" type="" autostart="" loop="false">');
+                }else if(navigator.userAgent.indexOf("Firefox")>0){
+                    /*火狐浏览器*/
+                    $("body").append('<object class="remove" data="music/sound0'+index+'.mp3" type="">'+
+                            '<param name="src" value="music/sound0'+index+'.mp3">'+
+                            '<param name="autostart" value="1">'+
+                            '<param name="playcount" value="true">'+
+                            '</object>');
+                }else{
+                    /*其他，主要是ie*/
+                    $("body").append('<bgsound class="remove" src="music/sound0'+index+'.mp3" autostart="true" loop="false"></bgsound>')
+                }
+
+                setTimeout(function () {
+                    $(".remove").eq(0).remove()
+                },1000);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="footer">
+    <div class="footer-content">
+        <div class="music">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="shengmin">蜀ICP备16002451号</div>
+    </div>
+</div>
+</body>
+</html>

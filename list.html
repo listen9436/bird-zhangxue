@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css2/dongtai.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <!--<script src="js/list.js"></script>-->
+    <!--<script src="js/listData.js"></script>-->
+    <script src="js/list(改Ajax版).js"></script>
+</head>
+<body>
+<!--头部-->
+<div id="header"></div>
+<!--列表-->
+<div class="content_warp">
+    <h1 class="title_big">小鸟动态</h1>
+    <h2>About Company</h2>
+    <img src="images/three_points01.png">
+    <h1 class="title_list">
+        列表
+        <span class="pen"></span>
+    </h1>
+    <div class="list_content" id="articleList">
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img01.jpg">
+            <div class="content_text">
+                <p class="text_p1">胜林三境重装出发</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img02.jpg">
+            <div class="content_text">
+                <p class="text_p1">小鸟掌学开通国外通道</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+
+        </div>
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img03.jpg">
+            <div class="content_text">
+                <p class="text_p1">胜林三境天气app上线</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img04.jpg">
+            <div class="content_text">
+                <p class="text_p1">国外报道</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img04.jpg">
+            <div class="content_text">
+                <p class="text_p1">胜林三境天气app上线</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+        <div class="content_one">
+            <img class="img_warp" src="images/list_img03.jpg">
+            <div class="content_text">
+                <p class="text_p1">胜林三境重装出发</p>
+                <p class="text_p2">2016-02-03</p>
+                <p class="text_p3">小鸟掌学创建于2014年初，起源服务于四川省专业技术人员继续教育基地的在线培训平台</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+    </div>
+    <img style="margin:30px auto 0" class="nomore_img" src="images/list_gomore_bg.jpg">
+    <div class="list_more" id="listMore"></div>
+    <div id="itemHtml" style="display:none;">
+        <div class="content_one" articleid="$articleId$">
+            <div class="img_warp"><img src="$articleCover$"></div>
+            <div class="content_text">
+                <p class="text_p1">$articleTitle$</p>
+                <p class="text_p2">$updateTime$</p>
+                <p class="text_p3">$describe$</p>
+            </div>
+            <img class="list_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+    </div>
+
+</div>
+<div class="footer_img"></div>
+<div id="footer"></div>
+<div class="backTop">
+    <div class="scroll_top"></div>
+    <div class="fixed_lianxi"></div>
+</div>
+</body>
+</html>
