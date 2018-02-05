@@ -1,0 +1,368 @@
+/*团队介绍*/
+.team{
+    width: 1100px;
+    margin: 0 auto;
+}
+.team-top{
+    color: #311859;
+    text-align: center;
+}
+.team-top h1{
+    line-height: 60px;
+    font-size: 50px;
+}
+.team-top h2{
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+.team-img1{
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.team-content{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.team_move{
+    width: 5680px;
+    height: 250px;
+    padding-top: 64px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.move-one{
+    width: 1130px;
+    height: 314px;
+    float: left;
+}
+.moveone-left{
+    width: 533px;
+    height: 188px;
+    border: 1px solid #e0e1e5;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+}
+.move-img{
+    position: absolute;
+    top: -65px;
+    left: 26px;
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.move-img a{
+    display: inline-block;
+    width: 156px;
+    height: 156px;
+    background: url("../images/team_amore.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+.move-img:hover a{
+    opacity: 1;
+}
+.move-p1{
+    width: 246px;
+    height: 80px;
+    position: absolute;
+    top: 24px;
+    left: 220px;
+    color: #565559;
+    line-height: 24px;
+    font-size: 16px;
+}
+.move-p2{
+    text-align: center;
+    font-size: 24px;
+    color: #5f4c82;
+    width: 222px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.move-p2 span{
+    font-size: 18px;
+}
+.move-email{
+    height: 45px;
+    width: 246px;
+    position: absolute;
+    bottom: 20px;
+    left: 220px;
+    background: #e7e8ec;
+    border: 1px solid #e0e1e5;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+.move-email:hover{
+    border: 1px solid #86759e;
+}
+.move-email i{
+    float: left;
+    width: 45px;
+    height: 45px;
+    background: #d9d9e1 url("../images/team_contact.png") 12px 17px no-repeat;
+}
+.move-email span{
+    width: 200px;
+    float: left;
+    line-height: 45px;
+    text-align: center;
+    color: #5f4c82;
+    font-size: 16px;
+}
+.move-fenxiang{
+    width: 47px;
+    height: 190px;
+    background: #2999d6;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+.move-fenxiang span{
+    display: block;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+}
+.move-fenxiang span:hover{
+    background-color: #168bcb;
+    transition: all 0.5s ease;
+}
+.fx-weibo{
+    background: url("../images/team_contact.png") no-repeat 14px -30px;
+}
+.fx-qq{
+    background: url("../images/team_contact.png") no-repeat 14px -75px;
+}
+.fx-github{
+    background: url("../images/team_contact.png") no-repeat 14px -125px;
+}
+.fx-weixin{
+    background: url("../images/team_contact.png") no-repeat 14px -170px;
+}
+/*联系我们*/
+.contact{
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.contact-top{
+    color: #311859;
+    text-align: center;
+}
+.contact-top h1{
+    line-height: 60px;
+    font-size: 50px;
+}
+.contact-top h2{
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+.contact-img1{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.contact-input{
+    width: 100%;
+    height: 313px;
+}
+.input-box{
+    float: left;
+    width: 345px;
+    height: 45px;
+    margin-right: 27px;
+    margin-bottom: 27px;
+    border: 1px solid #dedfe3;
+}
+.input-box:hover{
+    border: 1px solid #b5b5b5;
+    transition: all 0.3s ease 0s;
+}
+.input-box:nth-child(3){
+    margin-right: 0;
+    margin-left: 5px;
+}
+.input-box i{
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+.input-icon1{
+    background: #e7e8ec url("../images/lianxi_icons.png") 13px 14px no-repeat;
+}
+.input-icon2{
+    background: #e7e8ec url("../images/lianxi_icons.png") -30px 14px no-repeat;
+}
+.input-icon3{
+    background: #e7e8ec url("../images/lianxi_icons.png") -78px 14px no-repeat;
+}
+.input-box input{
+    float: left;
+    width: 282px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 18px;
+    color: #5f4c82;
+    background: #fff;
+    font-size: 16px;
+    border: none;
+    outline: 0 none;
+}
+.input-textarea{
+    float: left;
+    height: 210px;
+    width: 720px;
+    margin-right: 32px;
+    margin-bottom: 27px;
+    border: 1px solid #dedfe3;
+    background: #fff;
+}
+.input-textarea:hover{
+    border: 1px solid #b5b5b5;
+    transition: all 0.3s ease 0s;
+}
+.border1{
+    border: 1px solid #b5b5b5;
+}
+.input-icon4{
+    float: left;
+    width: 45px;
+    height: 210px;
+    background: #e7e8ec url("../images/lianxi_icons.png") -128px 14px no-repeat;
+}
+.input-textarea textarea{
+    float: left;
+    width: 640px;
+    height: 200px;
+    line-height: 27px;
+    text-align: left;
+    color: #5f4c82;
+    font-size: 16px;
+    padding: 10px 17px 0 18px;
+    border: 0;
+    outline: 0 none;
+    resize: none;
+}
+.input-message{
+    float: left;
+    width: 345px;
+    height: 210px;
+}
+.massage-p1{
+    font-size: 15px;
+    color: #7f7d83;
+    height: 86px;
+    width: 339px;
+    float: left;
+}
+.massage-p2{
+    color: #605f64;
+    font-size: 18px;
+    height: 72px;
+    width: 339px;
+    float: left;
+}
+.massage-div{
+    background: #168bcb;
+    border: 1px solid #2999d6;
+    width: 344px;
+    height: 45px;
+    margin-bottom: 27px;
+    float: left;
+    cursor: pointer;
+}
+.massage-div:hover{
+    transition: all 0.5s ease 0s;
+    background: #0d74ac;
+    border: 1px solid #0d74ac;
+}
+.massage-div i{
+    float: left;
+    width: 45px;
+    height: 45px;
+    background: #2999d6 url("../images/lianxi_icons.png") -179px 14px no-repeat;
+}
+.massage-div span{
+    float: left;
+    width: 200px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 18px;
+}
+.contact-ways{
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.contact-ways .ways-one:nth-child(2){
+    margin: 0 32px;
+}
+.ways-one>*{
+    float: left;
+}
+.ways-one{
+    width: 345px;
+    height: 250px;
+    float: left;
+}
+.ways-one img{
+    position: relative;
+    top: 24px;
+}
+.way-content{
+    margin-left: 27px;
+}
+.way-content h1{
+    width: 210px;
+    height: 60px;
+    line-height: 60px;
+    background: url("../images/lianxi_kuaier_bg.png") no-repeat bottom left;
+    color: #5f4c82;
+    margin-bottom: 14px;
+}
+.way-content p{
+    line-height: 32px;
+    color: #524d5c;
+}
+/*地图*/
+.map{
+    width: 100%;
+    height: 660px;
+    position: relative;
+}
+.map-topimg{
+    width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 999;
+}
+.map-topimg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.map-botimg{
+    background: url("../images/map_bottomimg.png") top center no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 33px;
+    width: 100%;
+    min-width: 1100px;
+}

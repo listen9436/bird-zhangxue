@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "microsoft yahei", "微软雅黑";
+    font-size: 15px;
+    background:#f1f2f6;
+}
+.header{
+    min-width: 1100px; /*通栏*/
+    height: 120px;
+    background:url("../images/header_bg.jpg");
+}
+.nav{
+    width: 1100px;
+    height: 120px;
+    margin: 0 auto;
+    color: #fff;
+}
+.nav .logo{
+    width: 380px;
+    height: 120px;
+    float: left;
+    background: url("../images/logo.png") no-repeat center;
+    cursor: pointer;
+}
+.nav-content{
+    width: 630px;
+    float: right;
+    margin-top: 40px;
+}
+.nav-box{
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+.nav-box:hover{
+    background: url("../images/nav_now_bg.png") no-repeat center bottom;
+}
+.headxiaodian{
+    background: url("../images/nav_now_bg.png") no-repeat center bottom;
+}
+.nav-box h1{
+    font-size: 16px;
+    padding:10px 15px;
+    cursor: pointer;
+}
+.nav-icon{
+    display: block;
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-left: 5px;
+    margin-top: -3px;
+    background: url("../images/nav_xiajiantou.png") no-repeat;
+}
+.nav-box:hover .nav-icon{
+    background: url("../images/nav_xiajiantou_hover.png") no-repeat;
+}
+.has-down{
+    width: 180px;
+    line-height: 40px;
+    position: absolute;
+    top:40px;
+    left:-16px;
+    background: #36264A;
+    display: none;
+}
+.has-down li{
+    list-style: none;
+    padding-left:30px;
+    transition: padding-left .6s ease 0s;
+}
+.has-down li:hover{
+    padding-left:45px;
+    cursor: pointer;
+    background: #009CE9 url("../images/nav_li_bg.png") no-repeat 160px 15px;
+}

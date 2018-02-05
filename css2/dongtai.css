@@ -1,0 +1,129 @@
+body{
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+    font-size: 15px;
+    background: #f1f2f6;
+}
+.content_warp{
+    width: 1100px;
+    margin: 0 auto;
+    min-height: 500px;
+    padding-top: 120px;
+    overflow: hidden;
+}
+.title_big{
+    text-align:center;
+    font-size:54px;
+    color:#311759;
+}
+.content_warp>h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    text-align: center;
+    font-size:18px;
+    letter-spacing:6px;
+}
+.content_warp>img{
+    margin:0 auto;
+    display:block;
+    margin-top:15px;
+}
+.title_list{
+    color: #311759;
+    font-size: 30px;
+    background: url(../images/pen_line_long.png) no-repeat 0 58px;
+    height: 60px;
+    position: relative;
+}
+.title_list .pen{
+    width: 61px;
+    height: 58px;
+    background: url(../images/pen_list.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    cursor: pointer;
+}
+.title_list .pen:hover{
+    background: url("../images/pen_hover.png")no-repeat;
+}
+.list_content{
+    padding-top: 40px;
+    overflow: hidden;
+    width: 1130px;
+}
+.content_one{
+    width: 513px;
+    height: 202px;
+    float: left;
+    background: #fff;
+    padding: 36px 0 0 20px;
+    margin: 0 20px 30px 0;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: relative;
+}
+.img_warp{
+    height: 168px;
+    width: 260px;
+    overflow: hidden;
+    float: left;
+    margin-right: 17px;
+}
+.content_text{
+    width:221px;
+    float: left;
+}
+.content_text .text_p1{
+    font-size: 20px;
+    color: #454548;
+    line-height: 26px;
+    max-height: 53px;
+    overflow: hidden;
+    padding-top: 15px;
+}
+.content_text .text_p2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6b6a6f;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.content_text .text_p3{
+    font-family: KaiTi_GB2312;
+    padding-top: 8px;
+    color: #47464a;
+    line-height: 25px;
+    max-height: 75px;
+    overflow: hidden;
+    letter-spacing: 0;
+}
+.list_xiaojiantou{
+    position: absolute;
+    left: 0;
+    top: 36px;
+}
+.content_one:hover{
+    border-color: #86759e;
+    transform: translateY(-6px);
+    transition: all 0.3s ease 0s;
+}
+.content_one:hover .list_xiaojiantou{
+    transform: translateX(46px);
+    transition: all 0.3s ease 0s;
+}
+.list_more{
+    height: 58px;
+    width: 58px;
+    background: url(../images/lis_more_btn_bg.png) no-repeat 0 -58px;
+    margin: 15px auto 130px;
+    cursor: pointer;
+}
+.list_more:hover{
+    background-position: 0 0;
+    transition: all 0.3s ease 0s;
+}
+.footer_img{
+    background: url(../images/map_bottomimg.png) top center no-repeat;
+    height: 33px;
+    width: 100%;
+    min-width: 1100px;
+}
