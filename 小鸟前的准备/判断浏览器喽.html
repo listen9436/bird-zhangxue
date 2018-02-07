@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <object data="" type=""></object><!--火狐下音乐标签的加载-->
+    
+    <bgsound></bgsound><!--ie下音乐标签的加载-->
+
+    <embed src="" type=""><!--谷歌浏览器下面的音乐标签加载-->
+
+</div>
+</body>
+<script>
+
+    console.log(navigator.userAgent);/*返回浏览器的详细信息*/
+    /*火狐 Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0*/
+    /*谷歌 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36*/
+    /*ie "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Shuame)"
+     */
+
+    if(navigator.userAgent.indexOf("Firefox")>0){
+        /*在火狐浏览器下面的代码*/
+        $("body").append('')
+        /*添加标签的时候，现在页面上把标签写完整，然后再添加到js里面*/
+    }else if(navigator.userAgent.indexOf("chrome")>0){
+        /*在谷歌浏览器下面的代码*/
+    }else{
+        /*ie浏览器*/
+    }
+
+</script>
+</html>

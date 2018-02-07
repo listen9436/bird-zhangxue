@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0 auto;
+        }
+
+        .box{
+            width: 550px;
+            height: 200px;
+            border:1px solid black;
+            margin:50px auto;
+            position: relative;
+        }
+
+        .box .box1{
+            width: 550px;
+            height: 200px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .box_box{
+            width: 2800px;
+            height: 200px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .box1 .box2{
+            width: 250px;
+            height: 200px;
+            margin-right:20px;
+            background: red;
+            float: left;
+            text-align: center;
+            font-size:60px;
+            line-height: 200px;
+            color: #fff;
+        }
+       /* .dian{
+            position: absolute;
+            bottom:20px;
+            left:50%;
+        }*/
+
+        .dian div{
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            top:50%;
+            text-align: center;
+            line-height: 60px;
+            color: #000;
+            font-size: 60px;
+            margin-top:-30px;
+            cursor:pointer;
+            background: rgba(255,0,234,0.6);
+        }
+
+        .dian .next{
+            right:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onselectstart="return false">
+        <!--当我们快速点击的时候图片和文字会被选中，给最外面的父盒子
+        onselectstart=“ruturn false”
+        -->
+        <div class="box_box">
+            <div class="box1">
+                <div class="box2">1</div>
+                <div class="box2">1</div>
+            </div>
+            <div class="box1">
+                <div class="box2">2</div>
+                <div class="box2">2</div>
+            </div>
+            <div class="box1">
+                <div class="box2">3</div>
+                <div class="box2">3</div>
+            </div>
+            <div class="box1">
+                <div class="box2">4</div>
+                <div class="box2">4</div>
+            </div>
+            <div class="box1">
+                <div class="box2">5</div>
+                <div class="box2">5</div>
+            </div>
+        </div>
+        <div class="dian">
+            <div class="prev"> < </div>
+            <div class="next"> > </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/move.js"></script>
+<script>
+    $(function(){
+        (function(){
+            var next = $(".next");
+            var prev = $(".prev");
+            var ul = $(".box_box");
+            var timer =null;
+            var nexttimer = null;
+
+/*我们加一个定时器，seTtimeOut，200一个缓冲的时候；
+* cleartimeOut ，防止竞争对手的恶意点击，以及无聊人等的恶意点击
+* */
+/*自动播放就是给next点击加上定时器就可以了*/
+            next.click(function(){
+                clearTimeout(nexttimer);
+                nexttimer = setTimeout(nextTo,200);
+            });
+
+            $(".box").hover(function(){
+                clearInterval(timer);
+            },function(){
+                timer=setInterval(nextTo,3000);
+            });
+
+            timer=setInterval(nextTo,3000);
+
+            function nextTo(){
+                ul.animate({left:-550},600,"backIn",function(){
+                    $(".box_box .box1:first-child").appendTo($(".box_box"));
+                    ul.animate({left:0},0);
+                })
+            };
+
+            prev.click(function(){
+                prevTo();
+            });
+
+            function prevTo(){
+                $(".box_box .box1:last-child").insertBefore(".box_box .box1:first-child");
+                ul.animate({left:-550},0,function(){
+                    ul.animate({left:0},600,"backOut");
+                })
+            }
+
+
+        })();
+
+
+
+
+
+
+    })
+
+
+
+</script>
+</html>

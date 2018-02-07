@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid red;
+            position: relative;
+        }
+        .box div{
+            width: 150px;
+            height: 25px;
+            border-radius: 15px;
+            background: #ccc;
+            float: left;
+            margin-right: 30px;
+            overflow: hidden;
+        }
+        .prev{
+            position: absolute;
+            bottom: 10px;
+            left: 80px;
+        }
+        .next{
+            position: absolute;
+            bottom: 10px;
+            left: 260px;
+        }
+        .box div span{
+            display: block;
+            width: 200px;
+            height: 25px;
+            background: #0A7EC3;
+        }
+        .prev span{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .next span{
+            position: absolute;
+            left: -200px;
+            top: 0;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function () {
+            $(".next").click(function () {
+               $(".prev").find("span").stop().animate({left:200},600, function () {
+                   $(".next").find("span").stop().animate({left:0},600);
+               })
+            });
+            $(".prev").click(function () {
+                $(".next").find("span").stop().animate({left:-200},600, function () {
+                    $(".prev").find("span").stop().animate({left:0},600);
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="prev">
+            <span></span>
+        </div>
+        <div class="next">
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

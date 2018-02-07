@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>穷版整屏滚动</title>
+    <!--<link rel="stylesheet" href="../guanwang/css/common.css">-->
+    <!--<link rel="stylesheet" href="..//css/animate.css">-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <style>
+
+        /*首先布局*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top {
+            height: 50px;
+            width: 100%;
+            background: red;
+        }
+
+        .box, .box1, .mu {
+            width: 100%;
+        }
+
+        .box {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 60px;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .ping1 {
+            background: pink;
+        }
+
+        .ping2 {
+            background: blue;
+        }
+
+        .ping3 {
+            background: orange;
+        }
+
+        .ping4 {
+            background: yellow;
+        }
+
+        .ping5 {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<div class="top"></div>
+<div class="box">
+    <div class="box1">
+        <div class="ping1 mu">1</div>
+        <div class="ping2 mu">2</div>
+        <div class="ping3 mu">3</div>
+        <div class="ping4 mu">4</div>
+        <div class="ping5 mu">5</div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        /*自调用函数*/
+        /*以后再写js的时候，一句代码写完了，一定要加上；*/
+
+        /*先给盒子设置高
+         * 书写鼠标滚动事件
+         * 火狐：event.detail>0 向下滚动；
+         * ie和谷歌event.wheelDelta>0 向上滚动；
+         *
+         *
+         * */
+        (function () {
+            var h = $(window).height() - 50;
+            $(".box,.mu").css({height: h});
+//            console.log(h);
+
+            var scrollFunc = function (event) {
+                var e = event || window.event;
+
+                /*ie和谷歌他俩一样*/
+                if (e.wheelDelta) {
+                    if (e.wheelDelta > 0) {
+                        /*鼠标向上滚动*/
+                        /* alert(event.wheelDelta);*/
+                        topGun();
+                    } else if (e.wheelDelta < 0) {
+                        /*鼠标向下滚动*/
+                        /*alert(event.wheelDelta);*/
+                        bottomGun();
+                    }
+                } else if (e.detail) {
+                    if (e.detail > 0) {
+                        /*鼠标向下*/
+                        /* alert(event.detail);*/
+                        bottomGun();
+                    } else if (e.detail < 0) {
+                        /*鼠标向上*/
+                        /*alert(event.detail);*/
+                        topGun();
+                    }
+                }
+            };
+            if (document.addEventListener) {
+                document.addEventListener("DOMMouseScroll", scrollFunc, false);
+                /*火狐浏览器鼠标滚动事件监听   （火狐默认的是事件捕获）*/
+
+            }
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+            /*谷歌，ie鼠标滚动事件   (谷歌，IE默认的是事件冒泡)*/
+
+            var index = 0;
+            var openGo = false;//节流阀
+            var numGo = 0; //次数
+            var timeGo = null; //间隔
+
+            function topGun() {
+                if(numGo <1){
+                    timeGo = setTimeout(function () {
+                        numGo++;
+                    },200);
+                }else if (!openGo) {
+                    openGo = true;
+                    index--;
+                    if (index < 0) {
+                        index = 0;
+                    }
+                    dong();
+                }
+            }
+
+            function bottomGun() {
+                if(numGo <1){
+                    timeGo = setTimeout(function () {
+                        numGo++;
+                    },200);
+                }else if (!openGo) {
+                    openGo = true;
+                    index++;
+                    var b = $(".mu").size() - 1;
+                    if (index > b) {
+                        index = b;
+                    }
+                    dong();
+                }
+            }
+
+            function dong() {
+                $(".box1").animate({top: "-" + index * h}, 600, function () {
+                    openGo = false;
+                    numGo = 0;
+                })
+            }
+        })();
+    })
+</script>
+</html>
